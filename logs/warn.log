@@ -1,0 +1,6 @@
+[2022-05-10 16:51:13:39851][http-nio-8080-exec-1] WARN  LogAspect - [AdviceInfo] classPath = com.mizzle.simulator.advice.ViewControllerAdvice.error
+[2022-05-10 16:51:16:43269][http-nio-8080-exec-6] WARN  LogAspect - [AdviceInfo] classPath = com.mizzle.simulator.advice.ViewControllerAdvice.error
+[2022-05-10 16:51:18:44889][http-nio-8080-exec-3] WARN  LogAspect - [AdviceInfo] classPath = com.mizzle.simulator.advice.ViewControllerAdvice.error
+[2022-05-10 16:51:20:47506][http-nio-8080-exec-2] WARN  LogAspect - [AdviceInfo] classPath = com.mizzle.simulator.advice.ViewControllerAdvice.error
+[2022-05-10 16:51:22:49026][http-nio-8080-exec-10] WARN  LogAspect - [AdviceInfo] classPath = com.mizzle.simulator.advice.ViewControllerAdvice.error
+[2022-05-10 16:51:26:53106][http-nio-8080-exec-5] WARN  LogAspect - [AdviceInfo] classPath = com.mizzle.simulator.advice.ViewControllerAdvice.error

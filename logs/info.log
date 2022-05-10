@@ -1,2 +1,7 @@
-[2022-05-04 15:02:42:4388][http-nio-8080-exec-2] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.readOne
-[2022-05-04 15:02:43:4672][http-nio-8080-exec-3] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.readOne
+[2022-05-10 16:51:13:39826][http-nio-8080-exec-7] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.readAll
+[2022-05-10 16:51:15:42136][http-nio-8080-exec-7] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.readOne
+[2022-05-10 16:51:20:47000][http-nio-8080-exec-4] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.readOne
+[2022-05-10 16:51:25:52250][http-nio-8080-exec-7] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.readOne
+[2022-05-10 16:54:04:210983][http-nio-8080-exec-3] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.create
+[2022-05-10 16:54:32:239290][http-nio-8080-exec-3] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.readAll
+[2022-05-10 16:56:11:338480][http-nio-8080-exec-6] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.readOne
