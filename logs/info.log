@@ -1,0 +1,2 @@
+[2022-05-04 15:02:42:4388][http-nio-8080-exec-2] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.readOne
+[2022-05-04 15:02:43:4672][http-nio-8080-exec-3] INFO  LogAspect - [LogInfo] classPath = com.mizzle.simulator.api.DashboardApi.readOne

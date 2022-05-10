@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/head :: head"></head>
+<body>
+    <header th:replace="layout/header :: header"></header>
+    <div class="w-full h-screen px-20 py-28 flex justify-center items-center">
+        <div class="text-center">
+            <div class="text-9xl font-bold text-black leading-loose tracking-widest">
+                404
+            </div>
+            <div class="text-2xl font-sm text-gray-400 leading-loose py-8">
+                Page Not Found
+            </div>
+            <a th:href="@{/}" class="text-sm font-sm text-gray-200 rounded bg-gray-400 px-4 py-2">
+                메인으로
+            </a>
+            
+        </div>
+    </div>
+    <footer th:replace="layout/footer :: footer"></footer>
+    <script th:src="@{/js/common.js}"></script>
+
+</body>
+</html>

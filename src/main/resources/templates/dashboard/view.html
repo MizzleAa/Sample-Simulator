@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/head :: head"></head>
+<body class="bg-gray-50 w-screen h-screen">
+    <header th:replace="layout/header :: header"></header>
+    <header th:replace="modal/modal :: modal"></header>
+    <header th:replace="modal/loading :: loading"></header>
+
+    <input id="id" type="hidden" th:value="${id}">
+
+    <div class="flex px-20 pt-32">
+        <div class="w-full">
+            <div id="view" class="bg-white rounded p-10">
+                <div class="py-4 flex justify-end items-center">
+                    <button id="start" type="button" class="m-2 rounded-md border border-transparent px-4 py-2 bg-gray-200 text-base font-medium text-gray-600 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 sm:text-sm" onclick="Start()">시작</button>
+                    <button id="delete" type="button" class="m-2 rounded-md border border-transparent px-4 py-2 bg-gray-200 text-base font-medium text-gray-600 hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400 sm:text-sm" onclick="Delete()">삭제</button>
+                </div>
+
+                <div class="py-4">
+                    <label id="title" class="text-4xl font-bold">Title</label>
+                </div>
+                <div class="flex justify-between items-center font-bold py-4">
+                    <label id="createdDate" class="text-gray-400">createdDate</label>
+                </div>
+
+                <div>
+                    내용
+                </div>
+                <div class="py-4 mb-8 bg-gray-100 rounded">
+                    <lable id="content" class="p-2">content</lable>
+                </div>
+
+                <div>
+                    메타 정보
+                </div>
+                <div class="py-4 mb-4 bg-gray-50 rounded">
+                    <lable id="raw" class="p-2">raw</lable>
+                </div>
+
+                
+                <div>
+                    파일 목록
+                </div>
+                <div id="files">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer th:replace="layout/footer :: footer"></footer>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/view.js}"></script>
+    <script th:src="@{/js/modal.js}"></script>
+
+</body>
+</html>

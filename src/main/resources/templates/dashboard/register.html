@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout/head :: head"></head>
+<body class="bg-gray-50 w-screen h-screen">
+    <header th:replace="layout/header :: header"></header>
+    <header th:replace="modal/modal :: modal"></header>
+    <header th:replace="modal/loading :: loading"></header>
+
+    <div class="w-full px-20 py-32 ">
+        <div class="w-full bg-white shadow rounded p-8">
+            <div class="p-2">
+                <input type="text" id="title" name="title" class="w-full p-2 font-bold text-3xl outline-none border-b" placeholder="제목을 입력하세요."/>
+            </div>
+
+            <div class="p-2">
+                <input type="text" id="path" name="path" class="w-full p-2 font-md text-xl outline-none border-b" placeholder="파일 경로를 입력하세요." />
+            </div>
+
+            <div class="p-2">
+                <input type="text" id="content" name="content" class="w-full p-2 font-md text-xl outline-none border-b" placeholder="내용을 입력하세요."/>
+            </div>
+
+            <div class="p-2">
+                <textarea id="raw" name="raw" class="w-full p-2 h-48 font-md text-xl outline-none border rounded" placeholder="메타 정보를 입력하세요."></textarea>
+            </div>
+
+            <div class="p-2 w-full flex items-center justify-between">
+                <div class="py-2">
+                    <a class="px-4 py-2 rounded-md border hover:bg-gray-100 hover:ring-2 hover:ring-gray-200" th:href="@{/}">나가기</a>
+                </div>
+                <div class="py-2">
+                    <button type="button" class="px-4 py-2 rounded-md border bg-gray-100 hover:bg-gray-300 hover:ring-2 hover:ring-gray-400" onclick="register()" >등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer th:replace="layout/footer :: footer"></footer>
+    <script th:src="@{/js/common.js}"></script>
+    <script th:src="@{/js/register.js}"></script>
+    <script th:src="@{/js/modal.js}"></script>
+
+</body>
+</html>

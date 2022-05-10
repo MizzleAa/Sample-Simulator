@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<header th:fragment="header">
+    <div class="z-100 fixed inset-x-0 top-0">
+        <div class="bg-white flex items-center justify-start w-full p-2 shadow">
+            <div class="p-2 text-2xl font-bold">
+                <a th:href="@{/}">Simulator</a>
+            </div>
+            <div class="px-10">
+                <a th:href="@{/dashboard/register}">등록</a>
+            </div>
+        </div>
+    </div>
+
+</header>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<header th:fragment="loading">
+    <!-- This example requires Tailwind CSS v2.0+ -->
+    <div id="loading" class="hidden fixed z-10 inset-0 overflow-y-auto" aria-labelledby="modal-title" role="dialog"
+        aria-modal="true">
+        <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+            <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+            <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true"></span>
+            <div
+                class="relative inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle w-sm">
+                <div class="flex text-center justify-center items-center">
+                    <svg class="w-20 h-20" version="1.1" id="L5" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
+                        enable-background="new 0 0 0 0" xml:space="preserve">
+                        
+                        <circle fill="#475569" stroke="none" cx="25" cy="50" r="6">
+                            <animateTransform attributeName="transform" dur="1s" type="translate"
+                                values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2"></animateTransform>
+                        </circle>
+                        <circle fill="#475569" stroke="none" cx="50" cy="50" r="6">
+                            <animateTransform attributeName="transform" dur="1s" type="translate"
+                                values="0 15 ; 0 -15; 0 15" repeatCount="indefinite" begin="0.1"></animateTransform>
+                        </circle>
+                        <circle fill="#475569" stroke="none" cx="75" cy="50" r="6">
+                            <animateTransform attributeName="transform" dur="1s" type="translate"
+                                values="0 10 ; 0 -10; 0 10" repeatCount="indefinite" begin="0.2"></animateTransform>
+                        </circle>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+</html>

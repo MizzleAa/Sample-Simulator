@@ -1,0 +1,18 @@
+body{
+    font-family: "KoPub-KR", "NotoSans-KR", "Roboto-EN";
+}
+
+@font-face {
+    font-family: "KoPub-KR";
+    src: url("/assets/font/KoPub_KR/KoPubWorld Dotum Light.ttf");
+}
+
+@font-face {
+    font-family: "NotoSans-KR";
+    src: url("/assets/font/Noto_Sans_KR/NotoSansKR-Light.otf");
+}
+
+@font-face{
+    font-family: "Roboto-EN";
+    src: url("/assets/font/Roboto_EN/Roboto-Regular.ttf");
+}
