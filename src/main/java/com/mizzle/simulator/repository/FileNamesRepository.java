@@ -13,6 +13,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface FileNamesRepository extends JpaRepository<FileNames, Long>{
+    Optional<FileNamesMapping> findByIdAndDashboard(long id, Dashboard dashboard);
     List<FileNamesMapping> findByDashboard(Dashboard dashboard);
     void deleteAllByDashboard(Dashboard dashboard);   
     Optional<FileNames> findByName(String name);

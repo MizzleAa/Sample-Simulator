@@ -106,5 +106,24 @@ public class DashboardApi {
         CustomAssert.isValidParameter(errors);
         return dashboardService.sendId(id, sendSocketIdPayload);
     }
+
+    @Operation(summary = "특정 데시보드 목록의 특정 파일 전송하기", description = "특정 데시보드 목록의 특정 파일을 전송 합니다.")
+    @ApiResponses(value = {
+        @ApiResponse(responseCode = "200", description = "전송 성공", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = SendSocketIdPayload.class) ) } ),
+        @ApiResponse(responseCode = "400", description = "전송 실패", content = { @Content(mediaType = "application/json", schema = @Schema(implementation = ErrorResponse.class) ) } ),
+    })
+    @PostMapping(value = "/dashboard/send/{id}/{fileId}")
+    public ResponseEntity<?> sendId(
+        @Parameter(name = "id", description = "전송할 dashboard의 id값", in = ParameterIn.PATH)
+        @PathVariable long id, 
+        @Parameter(name = "fileId", description = "전송할 dashboard의 file id값", in = ParameterIn.PATH)
+        @PathVariable long fileId, 
+        final @RequestBody @Validated SendSocketIdPayload sendSocketIdPayload,
+        BindingResult errors
+    ) throws InterruptedException 
+    {
+        CustomAssert.isValidParameter(errors);
+        return dashboardService.sendId(id, fileId, sendSocketIdPayload);
+    }
     
 }

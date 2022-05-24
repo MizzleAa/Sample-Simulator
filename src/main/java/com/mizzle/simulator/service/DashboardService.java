@@ -145,4 +145,26 @@ public class DashboardService {
 
         return ResponseEntity.ok(commonPayload);
     }
+
+    
+    public ResponseEntity<?> sendId(long id, long fileId, SendSocketIdPayload sendSocketIdPayload) throws InterruptedException {
+        Optional<Dashboard> dashboard = dashboardRepository.findById(id);
+
+        CustomAssert.isOptionalPresent(dashboard);
+
+        Optional<FileNamesMapping> fileName = fileNamesRepository.findByIdAndDashboard(fileId, dashboard.get());
+        CustomAssert.isOptionalPresent(fileName);
+
+        List<Integer> status = new ArrayList<>();
+
+        String json = webSocket.makeJson(fileName.get().getPath(), fileName.get().getName(), dashboard.get().getRaw());
+        int resultStatus = webSocket.send(sendSocketIdPayload.getUrl(), sendSocketIdPayload.getMethod(), json);
+        status.add(resultStatus);
+        //Thread.sleep(sendSocketIdPayload.getDelay());
+        log.info("Socket Status\t[{}]\tFile=\"{}/{}\"\tStatus={}", LocalDateTime.now(), fileName.get().getPath(), fileName.get().getName(), resultStatus);
+
+        CommonPayload commonPayload = CommonPayload.builder().check(true).information(status).build();
+
+        return ResponseEntity.ok(commonPayload);
+    }
 }
